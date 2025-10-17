@@ -1,0 +1,93 @@
+{
+  "data": {
+    "id": 42,
+    "key": "DEF-42",
+    "deleted": false,
+    "testSuite": {
+      "id": 14
+    },
+    "relativePosition": 0,
+    "createdAt": "2023-04-19T11:09:52Z",
+    "createdBy": {
+      "id": 32,
+      "username": "jhetfield",
+      "email": "jhetfield@zebrunner.com"
+    },
+    "lastModifiedAt": "2023-04-19T11:19:52Z",
+    "lastModifiedBy": {
+      "id": 32,
+      "username": "jhetfield",
+      "email": "jhetfield@zebrunner.com"
+    },
+    "title": "Verify login form",
+    "description": "Check login form meets all requirements according to design",
+    "priority": {
+      "id": 2,
+      "name": "Medium"
+    },
+    "automationState": {
+      "id": 1,
+      "name": "Not Automated"
+    },
+    "deprecated": false,
+    "draft": false,
+    "requirements": [
+      {
+        "source": "AZURE_DEVOPS",
+        "reference": "25"
+      },
+      {
+        "source": "JIRA",
+        "reference": "ZEB-1703"
+      }
+    ],
+    "attachments": [
+      {
+        "fileUuid": "1879f03e-1146-a931-bccd-5c54c7274f7a"
+      }
+    ],
+    "preConditions": "Login form is opened",
+    "postConditions": "Login form is closed",
+    "customField": {
+      "businessAreaDropdown": "Authentication & Authorization",
+      "reviewer": {
+        "id": 32,
+        "username": "jhetfield",
+        "email": "jhetfield@zebrunner.com"
+      },
+      "linkToZebrunner": "[Zebrunner](https://zebrunner.com)",
+      "reviewUntil": "2023-04-30",
+      "targetPlatform": [
+        "iOS",
+        "Android",
+        "Windows"
+      ],
+      "shortComment": "This is a single-line string",
+      "description": "This Test Case has Custom Fields of all types:\nbusinessAreaDropdown - Dropdown,\nreviewer - User,\nreviewUntil - Date,\nlinkToZebrunner - URL,\ntargetPlatform - Multi-select,\nshortComment - String,\ndescription - Text"
+    },
+    "steps": [
+      {
+        "action": "Open Login form",
+        "sharedStepsId": 2
+      },
+      {
+        "action": "Enter Admin credentials",
+        "sharedStepsId": 2
+      },
+      {
+        "action": "Click 'Login' button",
+        "expectedResult": "User is successfully logged in",
+        "sharedStepsId": 2
+      },
+      {
+        "action": "Open 'Launches' page",
+        "expectedResult": "List of Launches is displayed to the user",
+        "attachments": [
+          {
+            "fileUuid": "1879f03e-1146-a931-bccd-5c54c7274f7a"
+          }
+        ]
+      }
+    ]
+  }
+}
