@@ -17,19 +17,19 @@ package com.zebrunner.carina.demo.api;
 
 import com.zebrunner.carina.api.AbstractApiMethodV2;
 import com.zebrunner.carina.api.annotation.Endpoint;
-import com.zebrunner.carina.api.annotation.RequestTemplatePath;
 import com.zebrunner.carina.api.annotation.ResponseTemplatePath;
 import com.zebrunner.carina.api.annotation.SuccessfulHttpStatus;
 import com.zebrunner.carina.api.http.HttpMethodType;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 
-@Endpoint(url = "${base_url}/api/public/v1/test-cases/42?projectKey=${project_key}", methodType = HttpMethodType.GET)
+@Endpoint(url = "${base_url}/api/public/v1/test-cases/%{id}projectKey=${project_key}", methodType = HttpMethodType.GET)
 @ResponseTemplatePath(path = "api/zebrunner/test_case/id.json")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
 public class GetIdTestCase extends AbstractApiMethodV2 {
 
     public GetIdTestCase() {
         replaceUrlPlaceholder("base_url", Configuration.getRequired("zebrunner_url"));
+        replaceUrlPlaceholder("id", "42");
     }
 }

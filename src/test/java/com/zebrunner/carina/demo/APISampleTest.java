@@ -20,6 +20,7 @@ import java.lang.module.Configuration;
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.zebrunner.carina.demo.api.GetIdTestCase;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,7 +54,7 @@ public class APISampleTest implements IAbstractTest {
     @Test()
     @MethodOwner(owner = "dviarokha")
     public void getTestCasesById() {
-        GetTestCases getTestCasesById = new GetTestCases();
+        GetIdTestCase getTestCasesById = new GetIdTestCase();
         getTestCasesById.setHeaders("Authorization", "Basic ZGFyeWE6clNSMjdydmZFcFlsQ3RSZ1lITnpwaUxjdXBGeENMOHdzRm44Rmp4d1dkNFZXRFR6dUI=");
         getTestCasesById.callAPIExpectSuccess();
         getTestCasesById.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
